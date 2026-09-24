@@ -1,0 +1,3924 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Risolove — Risolnya Enak, Cintanya Dapat 💗</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #703b50;
+
+            background:
+                radial-gradient(
+                    circle at 10% 10%,
+                    rgba(255, 190, 215, .55),
+                    transparent 28%
+                ),
+                radial-gradient(
+                    circle at 90% 20%,
+                    rgba(255, 220, 235, .75),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 30% 90%,
+                    rgba(255, 201, 224, .5),
+                    transparent 30%
+                ),
+                linear-gradient(
+                    135deg,
+                    #fff5fa,
+                    #ffeaf3,
+                    #fff8fb
+                );
+
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+
+            background-image:
+                radial-gradient(
+                    rgba(255,255,255,.9) 1px,
+                    transparent 1px
+                );
+
+            background-size: 25px 25px;
+            opacity: .35;
+            z-index: -1;
+        }
+
+        body.locked {
+            overflow: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: min(1150px, 92%);
+            margin: auto;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, .48);
+
+            border: 1px solid rgba(255, 255, 255, .75);
+
+            box-shadow:
+                0 15px 40px rgba(177, 84, 122, .10),
+                inset 0 1px 0 rgba(255,255,255,.8);
+
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+        }
+
+        .cute-decoration {
+            position: fixed;
+            pointer-events: none;
+            z-index: 0;
+
+            color: #f48caf;
+            opacity: .5;
+
+            animation: floating 5s ease-in-out infinite;
+        }
+
+        .heart-1 {
+            top: 18%;
+            left: 3%;
+            font-size: 28px;
+        }
+
+        .heart-2 {
+            top: 45%;
+            right: 4%;
+            font-size: 24px;
+            animation-delay: 1s;
+        }
+
+        .heart-3 {
+            bottom: 15%;
+            left: 5%;
+            font-size: 20px;
+            animation-delay: 2s;
+        }
+
+        .sparkle-1 {
+            top: 30%;
+            right: 8%;
+            font-size: 22px;
+            animation-delay: .5s;
+        }
+
+        .sparkle-2 {
+            bottom: 30%;
+            right: 12%;
+            font-size: 18px;
+            animation-delay: 1.5s;
+        }
+
+        @keyframes floating {
+
+            0%,100% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-15px) rotate(8deg);
+            }
+
+        }
+
+        /* =====================================================
+           NAVBAR
+        ===================================================== */
+
+        nav {
+            position: fixed;
+
+            top: 18px;
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            width: min(1050px, 92%);
+
+            padding: 12px 18px;
+
+            border-radius: 25px;
+
+            z-index: 1000;
+
+            background: rgba(255,255,255,.58);
+
+            border: 1px solid rgba(255,255,255,.8);
+
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+
+            box-shadow:
+                0 10px 35px rgba(157, 66, 107, .12);
+        }
+
+        .nav-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+
+            font-family: 'Baloo 2', cursive;
+            font-size: 26px;
+            font-weight: 800;
+
+            color: #d84d7b;
+        }
+
+        .logo-heart {
+            color: #f05c8a;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 600;
+
+            transition: .3s;
+        }
+
+        .nav-links a:hover {
+            color: #e34f80;
+        }
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .hero {
+            min-height: 100vh;
+
+            display: flex;
+            align-items: center;
+
+            padding: 120px 0 70px;
+
+            position: relative;
+        }
+
+        .hero:before {
+            content: "";
+            position: absolute;
+            inset: 0;
+
+            background:
+                radial-gradient(
+                    circle at 75% 25%,
+                    rgba(255,255,255,.8),
+                    transparent 22%
+                ),
+                linear-gradient(
+                    120deg,
+                    transparent 35%,
+                    rgba(255,255,255,.35) 50%,
+                    transparent 65%
+                );
+
+            background-size:
+                auto,
+                250% 100%;
+
+            animation: heroShine 10s linear infinite;
+
+            pointer-events: none;
+        }
+
+        @keyframes heroShine {
+            to {
+                background-position:
+                    center,
+                    250% 0;
+            }
+        }
+
+        .hero-content {
+            display: grid;
+
+            grid-template-columns: 1.1fr .9fr;
+
+            gap: 50px;
+
+            align-items: center;
+
+            transform-style: preserve-3d;
+        }
+
+        .hero-text {
+            animation: fadeUp 1s ease forwards;
+        }
+
+        .small-label {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            padding: 8px 15px;
+
+            border-radius: 50px;
+
+            background: rgba(255,255,255,.55);
+
+            border: 1px solid rgba(255,255,255,.8);
+
+            font-size: 13px;
+            font-weight: 600;
+
+            color: #b84b70;
+
+            box-shadow:
+                0 8px 25px rgba(200, 80, 125, .08);
+        }
+
+        .hero h1 {
+            margin-top: 20px;
+
+            font-family: 'Baloo 2', cursive;
+
+            font-size: clamp(55px, 8vw, 100px);
+
+            line-height: .85;
+
+            color: #d84978;
+
+            letter-spacing: -3px;
+        }
+
+        .hero h1 span {
+            color: #ee719a;
+        }
+
+        .hero-subtitle {
+            margin-top: 20px;
+
+            max-width: 580px;
+
+            font-size: 18px;
+
+            line-height: 1.8;
+
+            color: #805267;
+        }
+
+        .hero-buttons {
+            display: flex;
+
+            gap: 12px;
+
+            margin-top: 30px;
+
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            padding: 13px 22px;
+
+            border-radius: 50px;
+
+            font-weight: 600;
+
+            font-size: 14px;
+
+            transition: .3s;
+
+            transform-style: preserve-3d;
+        }
+
+        .btn-primary {
+            color: white;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ed6793,
+                    #d84978
+                );
+
+            box-shadow:
+                0 10px 25px rgba(216, 73, 120, .25);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-4px) translateZ(8px);
+
+            box-shadow:
+                0 15px 30px rgba(216, 73, 120, .32);
+        }
+
+        .btn-glass {
+            background: rgba(255,255,255,.5);
+
+            border: 1px solid white;
+        }
+
+        .btn-glass:hover {
+            transform: translateY(-4px) translateZ(8px);
+
+            background: rgba(255,255,255,.8);
+        }
+
+        /* =====================================================
+           PROFILE HERO
+        ===================================================== */
+
+        .profile-wrapper {
+            display: flex;
+
+            justify-content: center;
+
+            position: relative;
+
+            transform-style: preserve-3d;
+        }
+
+        .profile-card {
+            width: 330px;
+
+            padding: 28px;
+
+            border-radius: 40px;
+
+            text-align: center;
+
+            animation:
+                profileFloat 4s ease-in-out infinite;
+
+            transform-style: preserve-3d;
+
+            transition:
+                transform .35s ease,
+                box-shadow .35s ease;
+        }
+
+        .profile-card:hover {
+            transform:
+                translateY(-8px)
+                rotateX(2deg)
+                rotateY(-2deg);
+
+            box-shadow:
+                0 28px 55px rgba(128,54,87,.16),
+                inset 0 1px 0 rgba(255,255,255,.85);
+        }
+
+        .profile-circle {
+            width: 225px;
+            height: 225px;
+
+            margin: auto;
+
+            border-radius: 50%;
+
+            overflow: hidden;
+
+            border: 8px solid rgba(255,255,255,.75);
+
+            box-shadow:
+                0 15px 40px rgba(190, 66, 111, .18),
+                0 0 0 10px rgba(255,255,255,.25);
+
+            background: #ffdce9;
+        }
+
+        .profile-circle img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+        .profile-card h3 {
+            margin-top: 20px;
+
+            font-family: 'Baloo 2', cursive;
+
+            font-size: 27px;
+
+            color: #d84978;
+        }
+
+        .profile-card p {
+            font-size: 13px;
+
+            color: #966077;
+
+            margin-top: 3px;
+        }
+
+        .profile-heart {
+            position: absolute;
+
+            font-size: 35px;
+
+            color: #f06996;
+        }
+
+        .ph1 {
+            top: 0;
+            right: 35px;
+        }
+
+        .ph2 {
+            bottom: 40px;
+            left: 25px;
+        }
+
+        @keyframes profileFloat {
+
+            0%,100% {
+                transform:
+                    translateY(0)
+                    rotate(0deg);
+            }
+
+            50% {
+                transform:
+                    translateY(-14px)
+                    rotate(1deg);
+            }
+
+        }
+
+        /* =====================================================
+           SECTIONS
+        ===================================================== */
+
+        section {
+            position: relative;
+        }
+
+        section:not(.hero):after {
+            content: "";
+
+            position: absolute;
+
+            width: 300px;
+            height: 300px;
+
+            border-radius: 50%;
+
+            right: -170px;
+            top: 18%;
+
+            background:
+                rgba(255,163,197,.12);
+
+            filter: blur(5px);
+
+            pointer-events: none;
+
+            z-index: -1;
+        }
+
+        /* =====================================================
+           REVEAL
+        ===================================================== */
+
+        .reveal {
+            opacity: 0;
+
+            transform:
+                translateY(35px)
+                scale(.98);
+
+            transition:
+                opacity .8s ease,
+                transform .8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+
+            transform:
+                translateY(0)
+                scale(1);
+        }
+
+        /* =====================================================
+           ABOUT
+        ===================================================== */
+
+        #about {
+            padding: 100px 0;
+        }
+
+        .section-heading {
+            text-align: center;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .section-heading .mini {
+            color: #d84978;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .section-heading h2 {
+            margin-top: 8px;
+
+            font-family: 'Baloo 2', cursive;
+
+            font-size: 46px;
+
+            color: #7c4059;
+        }
+
+        .section-heading p {
+            margin-top: 10px;
+
+            color: #8f6878;
+
+            font-size: 14px;
+
+            line-height: 1.8;
+        }
+
+        .about-card {
+            margin-top: 45px;
+
+            padding: 35px;
+
+            border-radius: 35px;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 40px;
+
+            transform-style: preserve-3d;
+
+            transition:
+                transform .35s ease,
+                box-shadow .35s ease;
+        }
+
+        .about-card:hover {
+            transform:
+                translateY(-8px)
+                rotateX(2deg)
+                rotateY(-2deg);
+
+            box-shadow:
+                0 28px 55px rgba(128,54,87,.16),
+                inset 0 1px 0 rgba(255,255,255,.85);
+        }
+
+        .about-card h3 {
+            font-family: 'Baloo 2', cursive;
+
+            font-size: 32px;
+
+            color: #d84978;
+
+            margin-bottom: 10px;
+        }
+
+        .about-card p {
+            font-size: 14px;
+
+            line-height: 1.9;
+
+            color: #805267;
+        }
+
+        .about-info {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 14px;
+
+            margin-top: 20px;
+        }
+
+        .info-box {
+            padding: 18px;
+
+            border-radius: 22px;
+
+            background:
+                rgba(255,255,255,.5);
+
+            border:
+                1px solid rgba(255,255,255,.8);
+
+            box-shadow:
+                0 10px 25px rgba(155,67,105,.08);
+
+            transition: .3s;
+        }
+
+        .info-box:hover {
+            transform:
+                translateY(-5px)
+                rotateX(4deg);
+        }
+
+        .info-box i {
+            color: #e35b87;
+
+            font-size: 22px;
+        }
+
+        .info-box strong {
+            display: block;
+
+            margin-top: 8px;
+
+            font-size: 13px;
+        }
+
+        .info-box span {
+            display: block;
+
+            margin-top: 4px;
+
+            font-size: 11px;
+
+            color: #9c7282;
+        }
+
+        /* =====================================================
+           MENU
+        ===================================================== */
+
+        #menu {
+            padding: 100px 0;
+        }
+
+        .menu-grid {
+            margin-top: 45px;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3,1fr);
+
+            gap: 22px;
+        }
+
+        .menu-card {
+            background:
+                rgba(255,255,255,.55);
+
+            border:
+                1px solid rgba(255,255,255,.8);
+
+            border-radius: 28px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 15px 35px rgba(156,69,106,.10);
+
+            transition:
+                transform .35s ease,
+                box-shadow .35s ease;
+
+            position: relative;
+
+            transform-style: preserve-3d;
+        }
+
+        .menu-card:before {
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    120deg,
+                    transparent 20%,
+                    rgba(255,255,255,.45) 45%,
+                    transparent 70%
+                );
+
+            transform: translateX(-120%);
+
+            transition:
+                transform .7s ease;
+
+            pointer-events: none;
+
+            z-index: 3;
+        }
+
+        .menu-card:hover:before {
+            transform:
+                translateX(120%);
+        }
+
+        .menu-card:hover {
+            transform:
+                translateY(-10px)
+                rotateX(3deg)
+                rotateY(-2deg)
+                scale(1.015);
+
+            box-shadow:
+                0 28px 55px rgba(128,54,87,.16);
+        }
+
+        .menu-image {
+            height: 220px;
+
+            overflow: hidden;
+
+            position: relative;
+        }
+
+        .menu-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            transition:
+                transform .6s ease;
+        }
+
+        .menu-card:hover .menu-image img {
+            transform:
+                scale(1.09);
+        }
+
+        .menu-content {
+            padding: 20px;
+        }
+
+        .menu-content h3 {
+            font-family: 'Baloo 2', cursive;
+
+            font-size: 24px;
+
+            color: #7d4059;
+        }
+
+        .menu-content p {
+            margin-top: 7px;
+
+            color: #9a7181;
+
+            font-size: 12px;
+
+            line-height: 1.6;
+        }
+
+        .price {
+            margin-top: 13px;
+
+            font-family: 'Baloo 2', cursive;
+
+            font-size: 23px;
+
+            font-weight: 800;
+
+            color: #d84978;
+        }
+
+        .heart-menu {
+            position: absolute;
+
+            right: 15px;
+            top: 15px;
+
+            width: 38px;
+            height: 38px;
+
+            border-radius: 50%;
+
+            display: grid;
+
+            place-items: center;
+
+            background:
+                rgba(255,255,255,.8);
+
+            color: #e45c89;
+
+            z-index: 5;
+
+            box-shadow:
+                0 8px 20px rgba(129,56,88,.12);
+        }
+
+        /* =====================================================
+           CONTACT
+        ===================================================== */
+
+        #contact {
+            padding: 100px 0;
+        }
+
+        .contact-grid {
+            display: grid;
+
+            grid-template-columns:
+                1.2fr .8fr;
+
+            gap: 25px;
+
+            margin-top: 45px;
+        }
+
+        .contact-card {
+            padding: 30px;
+
+            border-radius: 30px;
+
+            transition:
+                transform .35s ease,
+                box-shadow .35s ease;
+
+            transform-style: preserve-3d;
+        }
+
+        .contact-card:hover {
+            transform:
+                translateY(-8px)
+                rotateX(2deg)
+                rotateY(-2deg);
+
+            box-shadow:
+                0 28px 55px rgba(128,54,87,.16);
+        }
+
+        .contact-card h3 {
+            font-family: 'Baloo 2', cursive;
+
+            font-size: 28px;
+
+            color: #d84978;
+
+            margin-bottom: 18px;
+        }
+
+        .location-link {
+            display: flex;
+
+            gap: 15px;
+
+            padding: 18px;
+
+            border-radius: 20px;
+
+            background:
+                rgba(255,255,255,.5);
+
+            transition: .3s;
+        }
+
+        .location-link:hover {
+            transform:
+                translateY(-4px)
+                translateX(3px);
+        }
+
+        .location-link > i {
+            font-size: 25px;
+
+            color: #df5684;
+        }
+
+        .location-link strong {
+            display: block;
+
+            font-size: 14px;
+        }
+
+        .location-link span {
+            display: block;
+
+            margin-top: 5px;
+
+            font-size: 11px;
+
+            line-height: 1.7;
+
+            color: #957080;
+        }
+
+        .hours {
+            margin-top: 18px;
+
+            padding: 18px;
+
+            border-radius: 20px;
+
+            background:
+                rgba(255,255,255,.45);
+        }
+
+        .hours-title {
+            font-weight: 700;
+
+            font-size: 13px;
+
+            color: #7b4058;
+        }
+
+        .hours-title i {
+            color: #df5684;
+        }
+
+        .hours p {
+            margin-top: 10px;
+
+            font-size: 12px;
+
+            color: #947080;
+        }
+
+        .hours strong {
+            color: #d84978;
+
+            margin-left: 5px;
+        }
+
+        .social-list {
+            display: grid;
+
+            gap: 12px;
+        }
+
+        .social-link {
+            display: flex;
+
+            align-items: center;
+
+            gap: 13px;
+
+            padding: 16px;
+
+            border-radius: 20px;
+
+            background:
+                rgba(255,255,255,.5);
+
+            transition: .3s;
+        }
+
+        .social-link:hover {
+            transform:
+                translateY(-5px)
+                translateX(3px);
+
+            box-shadow:
+                0 12px 25px rgba(120,53,83,.10);
+        }
+
+        .social-link > i:first-child {
+            font-size: 22px;
+
+            color: #df5684;
+        }
+
+        .social-link div {
+            flex: 1;
+        }
+
+        .social-link strong {
+            display: block;
+
+            font-size: 13px;
+        }
+
+        .social-link small {
+            display: block;
+
+            margin-top: 3px;
+
+            color: #9b7182;
+
+            font-size: 10px;
+        }
+
+        .social-link > i:last-child {
+            color: #c27b96;
+        }
+
+        /* =====================================================
+           CTA
+        ===================================================== */
+
+        .cta {
+            padding: 50px 30px;
+
+            border-radius: 35px;
+
+            text-align: center;
+
+            margin: 30px 0 100px;
+        }
+
+        .cta h2 {
+            font-family: 'Baloo 2', cursive;
+
+            font-size: 40px;
+
+            color: #d84978;
+        }
+
+        .cta p {
+            max-width: 650px;
+
+            margin: 10px auto 25px;
+
+            font-size: 13px;
+
+            line-height: 1.8;
+
+            color: #8e6878;
+        }
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+            padding: 50px 0;
+
+            text-align: center;
+
+            background:
+                rgba(255,255,255,.45);
+
+            border-top:
+                1px solid rgba(255,255,255,.8);
+        }
+
+        .footer-logo {
+            font-family: 'Baloo 2', cursive;
+
+            font-size: 30px;
+
+            font-weight: 800;
+
+            color: #d84978;
+        }
+
+        .footer-heart {
+            color: #f05c8a;
+        }
+
+        footer p {
+            margin-top: 6px;
+
+            font-size: 12px;
+
+            color: #977082;
+        }
+
+        /* =====================================================
+           OPENING ANIMATION
+        ===================================================== */
+
+        #opening {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            overflow: hidden;
+
+            background:
+                radial-gradient(
+                    circle at 20% 20%,
+                    rgba(255,255,255,.95),
+                    transparent 25%
+                ),
+                radial-gradient(
+                    circle at 80% 15%,
+                    rgba(255,179,210,.55),
+                    transparent 28%
+                ),
+                radial-gradient(
+                    circle at 20% 85%,
+                    rgba(255,201,224,.7),
+                    transparent 30%
+                ),
+                linear-gradient(
+                    135deg,
+                    #fff7fb,
+                    #ffdce9 48%,
+                    #fff8fb
+                );
+
+            transition:
+                opacity .9s ease,
+                visibility .9s ease;
+        }
+
+        #opening.hide {
+            opacity: 0;
+
+            visibility: hidden;
+
+            pointer-events: none;
+        }
+
+        .opening-glow {
+            position: absolute;
+
+            border-radius: 50%;
+
+            filter: blur(5px);
+
+            pointer-events: none;
+        }
+
+        .opening-glow.g1 {
+            width: 320px;
+            height: 320px;
+
+            left: -80px;
+            top: -80px;
+
+            background:
+                rgba(255,255,255,.9);
+        }
+
+        .opening-glow.g2 {
+            width: 380px;
+            height: 380px;
+
+            right: -120px;
+            bottom: -120px;
+
+            background:
+                rgba(255,133,178,.2);
+        }
+
+        .opening-grid {
+            position: absolute;
+
+            inset: 0;
+
+            opacity: .18;
+
+            background-image:
+                linear-gradient(
+                    rgba(164,75,111,.12) 1px,
+                    transparent 1px
+                ),
+                linear-gradient(
+                    90deg,
+                    rgba(164,75,111,.12) 1px,
+                    transparent 1px
+                );
+
+            background-size: 34px 34px;
+
+            transform:
+                perspective(600px)
+                rotateX(58deg)
+                scale(1.6);
+
+            transform-origin:
+                center bottom;
+        }
+
+        .opening-center {
+            position: relative;
+
+            z-index: 4;
+
+            text-align: center;
+
+            transform:
+                translateY(-2vh);
+        }
+
+        .opening-badge {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            padding: 8px 15px;
+
+            border-radius: 999px;
+
+            background:
+                rgba(255,255,255,.55);
+
+            border:
+                1px solid rgba(255,255,255,.8);
+
+            box-shadow:
+                0 12px 30px rgba(133,49,87,.1);
+
+            backdrop-filter:
+                blur(12px);
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            letter-spacing: 2px;
+
+            color: #9b4e6d;
+        }
+
+        .opening-title {
+            margin: 18px 0 4px;
+
+            font-family: 'Baloo 2', cursive;
+
+            font-size:
+                clamp(56px,11vw,105px);
+
+            line-height: .8;
+
+            color: #8c4563;
+
+            text-shadow:
+                0 12px 0 rgba(255,255,255,.55),
+                0 20px 30px rgba(112,59,80,.14);
+
+            letter-spacing: -3px;
+        }
+
+        .opening-title span {
+            color: #f06f9d;
+        }
+
+        .opening-sub {
+            font-size: 14px;
+
+            color: #8e6575;
+
+            font-weight: 500;
+        }
+
+        .opening-loader {
+            width: 170px;
+
+            height: 7px;
+
+            margin:
+                22px auto 0;
+
+            border-radius: 999px;
+
+            background:
+                rgba(255,255,255,.7);
+
+            overflow: hidden;
+
+            box-shadow:
+                inset 0 2px 6px rgba(112,59,80,.08);
+        }
+
+        .opening-loader span {
+            display: block;
+
+            width: 40%;
+            height: 100%;
+
+            border-radius: inherit;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #f48caf,
+                    #d95c88,
+                    #f48caf
+                );
+
+            animation:
+                openingLoad 2.2s ease-in-out infinite;
+        }
+
+        @keyframes openingLoad {
+
+            0% {
+                transform:
+                    translateX(-110%);
+            }
+
+            100% {
+                transform:
+                    translateX(280%);
+            }
+
+        }
+
+        /* =====================================================
+           FALLING RISOL
+        ===================================================== */
+
+        #risolRain {
+            position: fixed;
+
+            inset: 0;
+
+            z-index: 9998;
+
+            pointer-events: none;
+
+            overflow: hidden;
+        }
+
+        .falling-risol {
+            position: absolute;
+
+            top: -120px;
+
+            width:
+                clamp(45px,7vw,78px);
+
+            height:
+                clamp(26px,4vw,42px);
+
+            border-radius:
+                55% 45% 48% 52%;
+
+            background:
+                linear-gradient(
+                    150deg,
+                    #fff0d7 0 17%,
+                    #e5b071 18% 70%,
+                    #c67b49 71% 100%
+                );
+
+            box-shadow:
+                inset -8px -5px 10px rgba(124,64,38,.16),
+                0 12px 20px rgba(114,59,80,.12);
+
+            filter:
+                drop-shadow(
+                    0 8px 7px rgba(112,59,80,.1)
+                );
+
+            opacity: .9;
+
+            animation:
+                fallRisol linear infinite;
+        }
+
+        .falling-risol:before {
+            content: "";
+
+            position: absolute;
+
+            inset:
+                5px 10px 8px;
+
+            border-radius: 50%;
+
+            border-top:
+                3px solid rgba(255,255,255,.55);
+
+            border-bottom:
+                2px solid rgba(156,83,45,.16);
+
+            transform:
+                rotate(-5deg);
+        }
+
+        .falling-risol.mayo:after {
+            content: "";
+
+            position: absolute;
+
+            left: 35%;
+            top: 35%;
+
+            width: 32%;
+            height: 18%;
+
+            border-radius: 50%;
+
+            background: #fff7e8;
+
+            box-shadow:
+                8px 0 #ef766f,
+                -8px 2px #f7b45f;
+        }
+
+        .falling-risol.choco {
+            background:
+                linear-gradient(
+                    150deg,
+                    #f9e2c7 0 16%,
+                    #a76548 17% 72%,
+                    #774332 73% 100%
+                );
+        }
+
+        .falling-risol.matcha {
+            background:
+                linear-gradient(
+                    150deg,
+                    #eff2d0 0 16%,
+                    #9ca95a 17% 72%,
+                    #657037 73% 100%
+                );
+        }
+
+        .falling-risol.mentai {
+            background:
+                linear-gradient(
+                    150deg,
+                    #ffe9d6 0 16%,
+                    #e88d67 17% 72%,
+                    #b95742 73% 100%
+                );
+        }
+
+        .falling-risol.purple {
+            background:
+                linear-gradient(
+                    150deg,
+                    #f5e3f5 0 16%,
+                    #aa78b8 17% 72%,
+                    #754b85 73% 100%
+                );
+        }
+
+        @keyframes fallRisol {
+
+            0% {
+                transform:
+                    translate3d(0,-140px,0)
+                    rotate(0deg);
+
+                opacity: 0;
+            }
+
+            10% {
+                opacity: .9;
+            }
+
+            50% {
+                margin-left: 35px;
+            }
+
+            100% {
+                transform:
+                    translate3d(-30px,120vh,0)
+                    rotate(420deg);
+
+                opacity: .1;
+            }
+
+        }
+
+        /* =====================================================
+           PROFILE LANDING
+        ===================================================== */
+
+        #profileLanding {
+            position: fixed;
+
+            inset: 0;
+
+            z-index: 9990;
+
+            display: none;
+
+            align-items: center;
+            justify-content: center;
+
+            overflow: hidden;
+
+            background:
+                radial-gradient(
+                    circle at 15% 20%,
+                    rgba(255,255,255,.95),
+                    transparent 24%
+                ),
+                radial-gradient(
+                    circle at 88% 15%,
+                    rgba(255,179,210,.65),
+                    transparent 28%
+                ),
+                radial-gradient(
+                    circle at 12% 90%,
+                    rgba(255,201,224,.75),
+                    transparent 30%
+                ),
+                linear-gradient(
+                    135deg,
+                    #fff7fb,
+                    #ffe2ed 48%,
+                    #fff8fb
+                );
+
+            opacity: 0;
+
+            transform:
+                scale(1.03);
+
+            transition:
+                opacity .9s ease,
+                transform .9s ease;
+        }
+
+        #profileLanding.active {
+            display: flex;
+
+            opacity: 1;
+
+            transform:
+                scale(1);
+        }
+
+        #profileLanding.exit {
+            opacity: 0;
+
+            transform:
+                scale(.96)
+                translateY(-18px);
+
+            pointer-events: none;
+        }
+
+        .profile-bg-orb {
+            position: absolute;
+
+            border-radius: 50%;
+
+            filter: blur(1px);
+
+            animation:
+                profileOrb 7s ease-in-out infinite;
+        }
+
+        .profile-orb-1 {
+            width: 280px;
+            height: 280px;
+
+            left: -90px;
+            top: 12%;
+
+            background:
+                rgba(255,255,255,.72);
+
+            box-shadow:
+                0 0 80px rgba(255,255,255,.7);
+        }
+
+        .profile-orb-2 {
+            width: 330px;
+            height: 330px;
+
+            right: -110px;
+            top: 12%;
+
+            background:
+                rgba(244,140,175,.2);
+        }
+
+        .profile-orb-3 {
+            width: 220px;
+            height: 220px;
+
+            right: 15%;
+            bottom: -100px;
+
+            background:
+                rgba(255,185,212,.3);
+
+            animation-delay:
+                1.5s;
+        }
+
+        @keyframes profileOrb {
+
+            50% {
+                transform:
+                    translate3d(18px,-18px,0)
+                    scale(1.06);
+            }
+
+            100% {
+                transform:
+                    translate3d(0,0,0)
+                    scale(1);
+            }
+
+        }
+
+        .profile-grid {
+            position: absolute;
+
+            inset: -15%;
+
+            background-image:
+                linear-gradient(
+                    rgba(132,62,91,.08) 1px,
+                    transparent 1px
+                ),
+                linear-gradient(
+                    90deg,
+                    rgba(132,62,91,.08) 1px,
+                    transparent 1px
+                );
+
+            background-size: 42px 42px;
+
+            transform:
+                perspective(750px)
+                rotateX(58deg)
+                translateY(24%);
+
+            transform-origin:
+                center bottom;
+
+            opacity: .45;
+
+            mask-image:
+                linear-gradient(
+                    to top,
+                    black,
+                    transparent 78%
+                );
+        }
+
+        .profile-decoration {
+            position: absolute;
+
+            color: #f08aad;
+
+            font-weight: 700;
+
+            opacity: .45;
+
+            animation:
+                decFloat 5s ease-in-out infinite;
+
+            pointer-events: none;
+        }
+
+        .profile-decoration.one {
+            left: 8%;
+            top: 24%;
+            font-size: 28px;
+        }
+
+        .profile-decoration.two {
+            right: 10%;
+            top: 28%;
+            font-size: 22px;
+            animation-delay: .8s;
+        }
+
+        .profile-decoration.three {
+            left: 12%;
+            bottom: 19%;
+            font-size: 25px;
+            animation-delay: 1.5s;
+        }
+
+        .profile-decoration.four {
+            right: 13%;
+            bottom: 18%;
+            font-size: 30px;
+            animation-delay: 2s;
+        }
+
+        @keyframes decFloat {
+
+            50% {
+                transform:
+                    translateY(-18px)
+                    rotate(10deg);
+            }
+
+        }
+
+        .profile-main {
+            position: relative;
+
+            z-index: 5;
+
+            width:
+                min(430px,90vw);
+
+            padding:
+                28px 26px 24px;
+
+            text-align: center;
+
+            border-radius: 34px;
+
+            background:
+                rgba(255,255,255,.46);
+
+            border:
+                1px solid rgba(255,255,255,.82);
+
+            box-shadow:
+                0 35px 90px rgba(130,58,91,.17),
+                inset 0 1px 0 rgba(255,255,255,.95),
+                inset 0 -1px 0 rgba(180,86,121,.08);
+
+            backdrop-filter:
+                blur(22px);
+
+            -webkit-backdrop-filter:
+                blur(22px);
+
+            transform-style:
+                preserve-3d;
+
+            animation:
+                profileCardIn 1s
+                cubic-bezier(.2,.8,.2,1)
+                both;
+        }
+
+        @keyframes profileCardIn {
+
+            from {
+                opacity: 0;
+
+                transform:
+                    translateY(35px)
+                    rotateX(8deg)
+                    scale(.94);
+            }
+
+            to {
+                opacity: 1;
+
+                transform: none;
+            }
+
+        }
+
+        .profile-main:before {
+            content: "";
+
+            position: absolute;
+
+            inset: 9px;
+
+            border-radius: 27px;
+
+            border:
+                1px solid rgba(255,255,255,.45);
+
+            pointer-events: none;
+        }
+
+        .profile-photo-wrap {
+            position: relative;
+
+            width: 142px;
+            height: 142px;
+
+            margin:
+                0 auto 15px;
+
+            transform:
+                translateZ(25px);
+        }
+
+        .profile-photo-ring {
+            position: absolute;
+
+            inset: -8px;
+
+            border-radius: 50%;
+
+            border:
+                2px dashed rgba(224,94,137,.55);
+
+            animation:
+                ringSpin 12s linear infinite;
+
+            box-shadow:
+                0 0 0 7px rgba(255,255,255,.2),
+                0 14px 30px rgba(181,69,112,.13);
+        }
+
+        @keyframes ringSpin {
+
+            to {
+                transform:
+                    rotate(360deg);
+            }
+
+        }
+
+        .profile-photo {
+            width: 100%;
+            height: 100%;
+
+            border-radius: 50%;
+
+            overflow: hidden;
+
+            border:
+                6px solid rgba(255,255,255,.9);
+
+            box-shadow:
+                0 18px 35px rgba(117,54,79,.18),
+                inset 0 0 0 1px rgba(178,71,111,.12);
+
+            background:
+                #f9dbe6;
+        }
+
+        .profile-photo img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+        }
+
+        .profile-heart {
+            position: absolute;
+
+            right: -7px;
+            bottom: 5px;
+
+            width: 34px;
+            height: 34px;
+
+            border-radius: 50%;
+
+            display: grid;
+
+            place-items: center;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #ff9fc1,
+                    #e96799
+                );
+
+            color: #fff;
+
+            border:
+                3px solid rgba(255,255,255,.9);
+
+            box-shadow:
+                0 10px 22px rgba(207,75,120,.28);
+
+            animation:
+                heartPop 2.2s ease-in-out infinite;
+        }
+
+        @keyframes heartPop {
+
+            50% {
+                transform:
+                    translateY(-5px)
+                    scale(1.06);
+            }
+
+        }
+
+        .profile-small {
+            font-size: 10px;
+
+            letter-spacing: 2.5px;
+
+            text-transform: uppercase;
+
+            color: #aa6a82;
+
+            font-weight: 700;
+        }
+
+        .profile-name {
+            font-family: 'Baloo 2', cursive;
+
+            font-size: 38px;
+
+            font-weight: 800;
+
+            line-height: 1;
+
+            color: #7b3e58;
+
+            letter-spacing: 1px;
+
+            margin-top: 5px;
+
+            text-shadow:
+                0 5px 0 rgba(255,255,255,.6);
+        }
+
+        .profile-handle {
+            font-size: 12px;
+
+            color: #d05d89;
+
+            font-weight: 600;
+
+            margin-top: 3px;
+        }
+
+        .profile-description {
+            font-size: 12px;
+
+            line-height: 1.7;
+
+            color: #806171;
+
+            margin:
+                13px auto 17px;
+
+            max-width: 320px;
+        }
+
+        /* =====================================================
+           PROFILE BUTTON MENU + LOKASI
+        ===================================================== */
+
+        .profile-actions {
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 11px;
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+        .profile-action {
+            border: 0;
+
+            cursor: pointer;
+
+            text-align: left;
+
+            padding:
+                13px 12px;
+
+            border-radius: 19px;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            color: #7b3e58;
+
+            transition:
+                transform .25s ease,
+                box-shadow .25s ease;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+        .profile-action:after {
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    120deg,
+                    transparent 25%,
+                    rgba(255,255,255,.5),
+                    transparent 75%
+                );
+
+            transform:
+                translateX(-120%);
+
+            transition:
+                .55s;
+        }
+
+        .profile-action:hover:after {
+            transform:
+                translateX(120%);
+        }
+
+        .profile-action:hover {
+            transform:
+                translateY(-5px)
+                rotateX(4deg);
+        }
+
+        .profile-action:active {
+            transform:
+                translateY(1px)
+                scale(.98);
+        }
+
+        .profile-menu-btn {
+            background:
+                linear-gradient(
+                    145deg,
+                    #fff,
+                    #ffdbe8
+                );
+
+            box-shadow:
+                0 12px 25px rgba(205,87,128,.16),
+                inset 0 1px 0 #fff;
+
+            border:
+                1px solid rgba(255,255,255,.8);
+        }
+
+        .profile-location-btn {
+            background:
+                linear-gradient(
+                    145deg,
+                    #fff,
+                    #f3e3eb
+                );
+
+            box-shadow:
+                0 12px 25px rgba(127,82,105,.13),
+                inset 0 1px 0 #fff;
+
+            border:
+                1px solid rgba(255,255,255,.8);
+        }
+
+        .action-icon {
+            width: 38px;
+            height: 38px;
+
+            flex:
+                0 0 38px;
+
+            border-radius: 13px;
+
+            display: grid;
+
+            place-items: center;
+
+            color: #fff;
+
+            font-size: 17px;
+
+            box-shadow:
+                inset 0 2px 4px rgba(255,255,255,.35),
+                0 7px 14px rgba(122,52,83,.12);
+        }
+
+        .profile-menu-btn .action-icon {
+            background:
+                linear-gradient(
+                    145deg,
+                    #f58eb1,
+                    #db5d8c
+                );
+        }
+
+        .profile-location-btn .action-icon {
+            background:
+                linear-gradient(
+                    145deg,
+                    #b9829a,
+                    #8f5974
+                );
+        }
+
+        .action-text {
+            display: flex;
+
+            flex-direction: column;
+
+            line-height: 1;
+
+            flex: 1;
+        }
+
+        .action-text strong {
+            font-size: 12px;
+
+            letter-spacing: 1px;
+        }
+
+        .action-text small {
+            font-size: 9px;
+
+            color: #9b7182;
+
+            margin-top: 4px;
+        }
+
+        .profile-action > i {
+            font-size: 12px;
+
+            color: #b76583;
+        }
+
+        .profile-enter-note {
+            margin-top: 15px;
+
+            font-size: 9px;
+
+            letter-spacing: 1px;
+
+            color: #a97b8d;
+        }
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media(max-width:900px) {
+
+            .hero-content {
+                grid-template-columns: 1fr;
+
+                text-align: center;
+            }
+
+            .hero-text {
+                display: flex;
+
+                flex-direction: column;
+
+                align-items: center;
+            }
+
+            .hero-subtitle {
+                max-width: 700px;
+            }
+
+            .about-card {
+                grid-template-columns: 1fr;
+            }
+
+            .menu-grid {
+                grid-template-columns:
+                    repeat(2,1fr);
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+        @media(max-width:600px) {
+
+            nav {
+                top: 10px;
+
+                padding:
+                    10px 13px;
+            }
+
+            .logo {
+                font-size: 21px;
+            }
+
+            .nav-links {
+                gap: 10px;
+            }
+
+            .nav-links a {
+                font-size: 10px;
+            }
+
+            .hero {
+                padding:
+                    110px 0 60px;
+            }
+
+            .hero h1 {
+                font-size: 62px;
+            }
+
+            .hero-subtitle {
+                font-size: 14px;
+            }
+
+            .profile-card {
+                width:
+                    min(320px,90vw);
+            }
+
+            .profile-circle {
+                width: 195px;
+                height: 195px;
+            }
+
+            .section-heading h2 {
+                font-size: 38px;
+            }
+
+            .about-card {
+                padding: 25px 20px;
+            }
+
+            .about-info {
+                grid-template-columns: 1fr;
+            }
+
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .menu-image {
+                height: 230px;
+            }
+
+            .contact-card {
+                padding: 22px 18px;
+            }
+
+            .cta h2 {
+                font-size: 32px;
+            }
+
+            .profile-main {
+                padding:
+                    23px 18px 20px;
+
+                border-radius: 29px;
+            }
+
+            .profile-photo-wrap {
+                width: 125px;
+                height: 125px;
+            }
+
+            .profile-name {
+                font-size: 34px;
+            }
+
+            .profile-actions {
+                grid-template-columns: 1fr;
+            }
+
+            .profile-description {
+                font-size: 11px;
+            }
+
+            .profile-decoration {
+                opacity: .25;
+            }
+
+            .opening-title {
+                letter-spacing: -2px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body class="locked">
+
+    <!-- =====================================================
+         OPENING ANIMATION
+    ====================================================== -->
+
+    <div id="opening">
+
+        <div class="opening-glow g1"></div>
+
+        <div class="opening-glow g2"></div>
+
+        <div class="opening-grid"></div>
+
+        <div class="opening-center">
+
+            <div class="opening-badge">
+                <i class="bi bi-heart-fill"></i>
+                HOMEMADE WITH LOVE
+            </div>
+
+            <div class="opening-title">
+                RISO<span>LOVE</span>
+            </div>
+
+            <div class="opening-sub">
+                Risolnya enak, cintanya dapat ♡
+            </div>
+
+            <div class="opening-loader">
+                <span></span>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         RISOL JATUH
+    ====================================================== -->
+
+    <div id="risolRain" aria-hidden="true"></div>
+
+
+    <!-- =====================================================
+         PROFILE LANDING
+    ====================================================== -->
+
+    <div id="profileLanding">
+
+        <div class="profile-bg-orb profile-orb-1"></div>
+
+        <div class="profile-bg-orb profile-orb-2"></div>
+
+        <div class="profile-bg-orb profile-orb-3"></div>
+
+        <div class="profile-grid"></div>
+
+        <div class="profile-decoration one">
+            ♡
+        </div>
+
+        <div class="profile-decoration two">
+            ✦
+        </div>
+
+        <div class="profile-decoration three">
+            🥟
+        </div>
+
+        <div class="profile-decoration four">
+            ♡
+        </div>
+
+
+        <div class="profile-main">
+
+            <div class="profile-photo-wrap">
+
+                <div class="profile-photo-ring"></div>
+
+                <div class="profile-photo">
+
+                    <img
+                        src="assets/ibu-risol.jpeg"
+                        alt="Pemilik Risolove"
+                    >
+
+                </div>
+
+                <div class="profile-heart">
+
+                    <i class="bi bi-heart-fill"></i>
+
+                </div>
+
+            </div>
+
+
+            <div class="profile-small">
+                Homemade • Fresh • Made With Love
+            </div>
+
+
+            <div class="profile-name">
+                RISOLOVE
+            </div>
+
+
+            <div class="profile-handle">
+                @risolove_tembung
+            </div>
+
+
+            <p class="profile-description">
+
+                Risol homemade dengan berbagai rasa unik,
+                dibuat dengan cinta untuk kamu yang suka
+                ngemil enak. ♡
+
+            </p>
+
+
+            <div class="profile-actions">
+
+                <button
+                    class="profile-action profile-menu-btn"
+                    type="button"
+                    onclick="masukKeMenu()"
+                >
+
+                    <span class="action-icon">
+                        <i class="bi bi-bag-heart-fill"></i>
+                    </span>
+
+                    <span class="action-text">
+
+                        <strong>
+                            MENU
+                        </strong>
+
+                        <small>
+                            Lihat aneka risol ♡
+                        </small>
+
+                    </span>
+
+                    <i class="bi bi-arrow-right"></i>
+
+                </button>
+
+
+                <button
+                    class="profile-action profile-location-btn"
+                    type="button"
+                    onclick="masukKeLokasi()"
+                >
+
+                    <span class="action-icon">
+                        <i class="bi bi-geo-alt-fill"></i>
+                    </span>
+
+                    <span class="action-text">
+
+                        <strong>
+                            LOKASI
+                        </strong>
+
+                        <small>
+                            Temukan Risolove
+                        </small>
+
+                    </span>
+
+                    <i class="bi bi-arrow-right"></i>
+
+                </button>
+
+            </div>
+
+
+            <div class="profile-enter-note">
+                Pilih menu atau lokasi untuk masuk ♡
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         CUTE DECORATION
+    ====================================================== -->
+
+    <div class="cute-decoration heart-1">
+        ♥
+    </div>
+
+    <div class="cute-decoration heart-2">
+        ♡
+    </div>
+
+    <div class="cute-decoration heart-3">
+        ♥
+    </div>
+
+    <div class="cute-decoration sparkle-1">
+        ✦
+    </div>
+
+    <div class="cute-decoration sparkle-2">
+        ✧
+    </div>
+
+
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
+    <nav class="glass">
+
+        <div class="nav-content">
+
+            <a href="#home" class="logo">
+
+                RISO
+                <span class="logo-heart">♥</span>
+                LOVE
+
+            </a>
+
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="#home">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#about">
+                        Tentang
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#menu">
+                        Menu
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#contact">
+                        Lokasi
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <section class="hero" id="home">
+
+        <div class="container">
+
+            <div class="hero-content">
+
+
+                <div class="hero-text">
+
+                    <div class="small-label">
+
+                        <i class="bi bi-heart-fill"></i>
+
+                        Risol Homemade dengan Cinta
+
+                    </div>
+
+
+                    <h1>
+
+                        RISO
+                        <span>LOVE</span>
+
+                    </h1>
+
+
+                    <p class="hero-subtitle">
+
+                        Risolnya enak, cintanya dapat.
+                        Nikmati berbagai pilihan rasa risol homemade
+                        yang dibuat dengan bahan pilihan dan penuh cinta.
+
+                    </p>
+
+
+                    <div class="hero-buttons">
+
+                        <a
+                            href="#menu"
+                            class="btn btn-primary"
+                        >
+
+                            <i class="bi bi-heart-fill"></i>
+
+                            Lihat Menu
+
+                        </a>
+
+
+                        <a
+                            href="#contact"
+                            class="btn btn-glass"
+                        >
+
+                            <i class="bi bi-geo-alt-fill"></i>
+
+                            Lokasi Kami
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FOTO PEMILIK -->
+
+                <div class="profile-wrapper">
+
+                    <div class="profile-heart ph1">
+                        ♥
+                    </div>
+
+                    <div class="profile-heart ph2">
+                        ♥
+                    </div>
+
+
+                    <div class="profile-card glass">
+
+                        <div class="profile-circle">
+
+                            <img
+                                src="assets/ibu-risol.jpeg"
+                                alt="Pemilik Risolove"
+                            >
+
+                        </div>
+
+
+                        <h3>
+                            Putri Alaina
+                        </h3>
+
+
+                        <p>
+                            Pemilik & Pengelola Risolove
+                        </p>
+
+
+                        <p style="margin-top:8px;">
+                            ♡ Made with love ♡
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         ABOUT
+    ====================================================== -->
+
+    <section id="about">
+
+        <div class="container">
+
+
+            <div class="section-heading reveal">
+
+                <div class="mini">
+                    — Tentang Risolove —
+                </div>
+
+
+                <h2>
+                    Ceritanya Risolove ♡
+                </h2>
+
+
+                <p>
+
+                    Mengenal lebih dekat UMKM Risolove
+                    dan berbagai rasa risol yang siap menemani harimu.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="about-card glass reveal">
+
+
+                <div>
+
+                    <h3>
+                        Risolove ♡
+                    </h3>
+
+
+                    <p>
+
+                        Risolove adalah UMKM yang menghadirkan
+                        aneka risol homemade dengan berbagai rasa
+                        yang unik dan cocok untuk menemani waktu santai.
+
+                    </p>
+
+
+                    <p style="margin-top:15px;">
+
+                        Setiap risol dibuat dengan bahan pilihan
+                        dan proses yang penuh perhatian supaya
+                        setiap gigitan tetap enak dan bikin nagih.
+
+                    </p>
+
+
+                    <div class="about-info">
+
+                        <div class="info-box">
+
+                            <i class="bi bi-person-heart"></i>
+
+                            <strong>
+                                Putri Alaina
+                            </strong>
+
+                            <span>
+                                Pemilik & Pengelola
+                            </span>
+
+                        </div>
+
+
+                        <div class="info-box">
+
+                            <i class="bi bi-heart-fill"></i>
+
+                            <strong>
+                                Aneka Rasa
+                            </strong>
+
+                            <span>
+                                Pilihan risol homemade
+                            </span>
+
+                        </div>
+
+
+                        <div class="info-box">
+
+                            <i class="bi bi-calendar-heart"></i>
+
+                            <strong>
+                                Selasa – Minggu
+                            </strong>
+
+                            <span>
+                                Hari operasional
+                            </span>
+
+                        </div>
+
+
+                        <div class="info-box">
+
+                            <i class="bi bi-stars"></i>
+
+                            <strong>
+                                Fresh & Homemade
+                            </strong>
+
+                            <span>
+                                Dibuat dengan cinta
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        Kenapa Risolove?
+                    </h3>
+
+
+                    <p>
+
+                        Karena ngemil bukan cuma soal kenyang.
+                        Ada rasa, tekstur, dan tentunya kebahagiaan
+                        kecil yang datang dari satu gigitan risol.
+
+                    </p>
+
+
+                    <p style="margin-top:15px;">
+
+                        Dari rasa gurih sampai rasa manis,
+                        Risolove punya pilihan untuk berbagai
+                        selera kamu.
+
+                    </p>
+
+
+                    <div
+                        style="
+                            margin-top:25px;
+                            padding:22px;
+                            border-radius:25px;
+                            background:linear-gradient(135deg,#ffe0eb,#fff);
+                            box-shadow:0 12px 25px rgba(190,72,112,.08);
+                        "
+                    >
+
+                        <strong
+                            style="
+                                font-family:'Baloo 2';
+                                font-size:25px;
+                                color:#d84978;
+                            "
+                        >
+                            “
+                        </strong>
+
+                        <p
+                            style="
+                                margin-top:3px;
+                                font-size:14px;
+                                font-style:italic;
+                            "
+                        >
+
+                            Risolnya enak,
+                            cintanya dapat. ♡
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         MENU
+    ====================================================== -->
+
+    <section id="menu">
+
+        <div class="container">
+
+
+            <div class="section-heading reveal">
+
+                <div class="mini">
+                    — Menu Risolove —
+                </div>
+
+
+                <h2>
+                    Pilih Rasa Favoritmu ♡
+                </h2>
+
+
+                <p>
+
+                    Ada rasa gurih, pedas, creamy,
+                    sampai rasa manis untuk kamu coba.
+
+                </p>
+
+            </div>
+
+
+            <div class="menu-grid">
+
+
+                <!-- MAYO -->
+
+                <div class="menu-card reveal">
+
+                    <div class="menu-image">
+
+                        <img
+                            src="assets/risol mayo.jpeg"
+                            alt="Risol Mayo"
+                        >
+
+                        <div class="heart-menu">
+                            <i class="bi bi-heart-fill"></i>
+                        </div>
+
+                    </div>
+
+
+                    <div class="menu-content">
+
+                        <h3>
+                            Risol Mayo
+                        </h3>
+
+                        <p>
+                            Risol gurih dengan isian mayo
+                            yang creamy dan nikmat.
+                        </p>
+
+                        <div class="price">
+                            Rp2.000
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BOLOGNESE -->
+
+                <div class="menu-card reveal">
+
+                    <div class="menu-image">
+
+                        <img
+                            src="assets/risol bolognese.jpeg"
+                            alt="Risol Bolognese"
+                        >
+
+                        <div class="heart-menu">
+                            <i class="bi bi-heart-fill"></i>
+                        </div>
+
+                    </div>
+
+
+                    <div class="menu-content">
+
+                        <h3>
+                            Risol Bolognese
+                        </h3>
+
+                        <p>
+                            Perpaduan risol gurih
+                            dengan saus bolognese.
+                        </p>
+
+                        <div class="price">
+                            Rp3.500
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- COKELAT -->
+
+                <div class="menu-card reveal">
+
+                    <div class="menu-image">
+
+                        <img
+                            src="assets/coklat.jpeg"
+                            alt="Risol Cokelat"
+                        >
+
+                        <div class="heart-menu">
+                            <i class="bi bi-heart-fill"></i>
+                        </div>
+
+                    </div>
+
+
+                    <div class="menu-content">
+
+                        <h3>
+                            Risol Cokelat
+                        </h3>
+
+                        <p>
+                            Rasa manis cokelat
+                            yang cocok untuk pencinta dessert.
+                        </p>
+
+                        <div class="price">
+                            Rp3.500
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- MATCHA -->
+
+                <div class="menu-card reveal">
+
+                    <div class="menu-image">
+
+                        <img
+                            src="assets/matcha.jpeg"
+                            alt="Risol Matcha"
+                        >
+
+                        <div class="heart-menu">
+                            <i class="bi bi-heart-fill"></i>
+                        </div>
+
+                    </div>
+
+
+                    <div class="menu-content">
+
+                        <h3>
+                            Risol Matcha
+                        </h3>
+
+                        <p>
+                            Perpaduan rasa matcha
+                            yang creamy dan unik.
+                        </p>
+
+                        <div class="price">
+                            Rp3.500
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RAGOUT -->
+
+                <div class="menu-card reveal">
+
+                    <div class="menu-image">
+
+                        <img
+                            src="assets/rayout.jpeg"
+                            alt="Risol Ragout"
+                        >
+
+                        <div class="heart-menu">
+                            <i class="bi bi-heart-fill"></i>
+                        </div>
+
+                    </div>
+
+
+                    <div class="menu-content">
+
+                        <h3>
+                            Risol Ragout
+                        </h3>
+
+                        <p>
+                            Isian ragout lembut dan gurih
+                            yang cocok untuk segala suasana.
+                        </p>
+
+                        <div class="price">
+                            Rp3.500
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- AYAM SUWIR -->
+
+                <div class="menu-card reveal">
+
+                    <div class="menu-image">
+
+                        <img
+                            src="assets/ayam suwir pedas.jpeg"
+                            alt="Ayam Suwir Pedas"
+                        >
+
+                        <div class="heart-menu">
+                            <i class="bi bi-heart-fill"></i>
+                        </div>
+
+                    </div>
+
+
+                    <div class="menu-content">
+
+                        <h3>
+                            Ayam Suwir Pedas
+                        </h3>
+
+                        <p>
+                            Ayam suwir dengan cita rasa
+                            pedas dan gurih.
+                        </p>
+
+                        <div class="price">
+                            Rp3.500
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- MENTAI -->
+
+                <div class="menu-card reveal">
+
+                    <div class="menu-image">
+
+                        <img
+                            src="assets/mentai.jpeg"
+                            alt="Risol Mentai"
+                        >
+
+                        <div class="heart-menu">
+                            <i class="bi bi-heart-fill"></i>
+                        </div>
+
+                    </div>
+
+
+                    <div class="menu-content">
+
+                        <h3>
+                            Risol Mentai
+                        </h3>
+
+                        <p>
+                            Saus mentai creamy
+                            dengan rasa gurih yang khas.
+                        </p>
+
+                        <div class="price">
+                            Rp3.500
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- UBI UNGU -->
+
+                <div class="menu-card reveal">
+
+                    <div class="menu-image">
+
+                        <img
+                            src="assets/ubi-ungu.jpeg"
+                            alt="Risol Ubi Ungu"
+                        >
+
+                        <div class="heart-menu">
+                            <i class="bi bi-heart-fill"></i>
+                        </div>
+
+                    </div>
+
+
+                    <div class="menu-content">
+
+                        <h3>
+                            Risol Ubi Ungu
+                        </h3>
+
+                        <p>
+                            Rasa manis ubi ungu
+                            yang lembut dan unik.
+                        </p>
+
+                        <div class="price">
+                            Rp3.500
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- OREO CHEESE -->
+
+                <div class="menu-card reveal">
+
+                    <div class="menu-image">
+
+                        <img
+                            src="assets/oreo cheese.jpeg"
+                            alt="Oreo Cheese"
+                        >
+
+                        <div class="heart-menu">
+                            <i class="bi bi-heart-fill"></i>
+                        </div>
+
+                    </div>
+
+
+                    <div class="menu-content">
+
+                        <h3>
+                            Oreo Cheese
+                        </h3>
+
+                        <p>
+                            Kombinasi Oreo dan cheese
+                            untuk rasa manis gurih.
+                        </p>
+
+                        <div class="price">
+                            Rp3.500
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         QUOTE
+    ====================================================== -->
+
+    <section>
+
+        <div class="container">
+
+            <div
+                class="quote-box glass reveal"
+                style="
+                    margin:0 auto 30px;
+                    max-width:850px;
+                    padding:40px 30px;
+                    border-radius:35px;
+                    text-align:center;
+                "
+            >
+
+                <div
+                    style="
+                        font-size:35px;
+                        color:#ef719c;
+                    "
+                >
+                    ♡
+                </div>
+
+                <h2
+                    style="
+                        font-family:'Baloo 2';
+                        font-size:35px;
+                        color:#d84978;
+                    "
+                >
+                    Satu Risol,
+                    Banyak Cerita.
+                </h2>
+
+                <p
+                    style="
+                        margin-top:10px;
+                        font-size:13px;
+                        line-height:1.8;
+                        color:#906b7b;
+                    "
+                >
+
+                    Temani waktu santaimu dengan
+                    risol homemade dari Risolove.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         LOCATION / CONTACT
+    ====================================================== -->
+
+    <section id="contact">
+
+        <div class="container">
+
+
+            <div class="section-heading reveal">
+
+                <div class="mini">
+                    — Temukan Kami —
+                </div>
+
+
+                <h2>
+                    Main ke Risolove ♡
+                </h2>
+
+
+                <p>
+
+                    Mau mencicipi langsung?
+                    Yuk datang dan temukan risol favoritmu!
+
+                </p>
+
+            </div>
+
+
+
+            <div class="contact-grid">
+
+
+                <div class="contact-card glass reveal">
+
+                    <h3>
+                        Lokasi & Jam Buka 📍
+                    </h3>
+
+
+                    <a
+                        href="https://maps.app.goo.gl/TGe6WAdPEj7SuB7o8?g_st=aw"
+                        target="_blank"
+                        class="location-link"
+                    >
+
+                        <i class="bi bi-geo-alt-fill"></i>
+
+
+                        <div>
+
+                            <strong>
+                                Risolove
+                            </strong>
+
+
+                            <span>
+
+                                Dusun III Jl. Medan - Batang Kuis,
+                                Sei Rotan, Kec. Percut Sei Tuan,
+                                Kabupaten Deli Serdang,
+                                Sumatera Utara 20371
+
+                            </span>
+
+
+                            <br>
+
+
+                            <span style="color:#d84978;">
+
+                                Klik untuk membuka Google Maps →
+
+                            </span>
+
+                        </div>
+
+                    </a>
+
+
+
+                    <div class="hours">
+
+                        <div class="hours-title">
+
+                            <i class="bi bi-clock-fill"></i>
+
+                            Jam Operasional
+
+                        </div>
+
+
+                        <p>
+
+                            Selasa – Minggu
+
+                            <strong>
+                                16.00 – selesai
+                            </strong>
+
+                        </p>
+
+
+                        <p>
+                            Senin: Libur
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-card glass reveal">
+
+                    <h3>
+                        Ikuti Kami ♡
+                    </h3>
+
+
+                    <div class="social-list">
+
+
+                        <a
+                            href="https://www.instagram.com/risolove_tembung?stkn=MWQ4cHQxMTNvMDVrMw=="
+                            target="_blank"
+                            class="social-link"
+                        >
+
+                            <i class="bi bi-instagram"></i>
+
+
+                            <div>
+
+                                <strong>
+                                    Instagram
+                                </strong>
+
+                                <small>
+                                    @risolove_tembung
+                                </small>
+
+                            </div>
+
+
+                            <i class="bi bi-arrow-up-right"></i>
+
+                        </a>
+
+
+
+                        <a
+                            href="https://www.tiktok.com/@risolove_tembung?_r=1&_t=ZS-99xa2iAiQ1k"
+                            target="_blank"
+                            class="social-link"
+                        >
+
+                            <i class="bi bi-tiktok"></i>
+
+
+                            <div>
+
+                                <strong>
+                                    TikTok
+                                </strong>
+
+                                <small>
+                                    @risolove_tembung
+                                </small>
+
+                            </div>
+
+
+                            <i class="bi bi-arrow-up-right"></i>
+
+                        </a>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CTA
+    ====================================================== -->
+
+    <section>
+
+        <div class="container">
+
+
+            <div class="cta glass reveal">
+
+                <h2>
+                    Sudah siap jatuh cinta? 💗
+                </h2>
+
+
+                <p>
+
+                    Temukan rasa favoritmu di Risolove.
+                    Karena setiap gigitan bukan cuma enak,
+                    tapi juga dibuat dengan cinta.
+
+                </p>
+
+
+                <a
+                    href="#menu"
+                    class="btn btn-primary"
+                >
+
+                    <i class="bi bi-heart-fill"></i>
+
+                    Lihat Semua Menu
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="footer-logo">
+
+                RISOL
+                <span class="footer-heart">♥</span>
+                LOVE
+
+            </div>
+
+
+            <p>
+                Risolnya Enak, Cintanya Dapat ♡
+            </p>
+
+
+            <p style="margin-top:12px;">
+
+                © 2026 Risolove.
+                Made with
+                <span class="footer-heart">♥</span>
+                by love.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script>
+
+        /* ==============================================
+           SCROLL REVEAL ANIMATION
+        ============================================== */
+
+        const reveals =
+            document.querySelectorAll(".reveal");
+
+
+        function revealOnScroll() {
+
+            const windowHeight =
+                window.innerHeight;
+
+
+            reveals.forEach((element) => {
+
+                const elementTop =
+                    element.getBoundingClientRect().top;
+
+
+                if (
+                    elementTop <
+                    windowHeight - 80
+                ) {
+
+                    element.classList.add("active");
+
+                }
+
+            });
+
+        }
+
+
+        window.addEventListener(
+            "scroll",
+            revealOnScroll
+        );
+
+
+        window.addEventListener(
+            "load",
+            revealOnScroll
+        );
+
+
+        /* ==============================================
+           SMOOTH NAVIGATION
+        ============================================== */
+
+        document
+            .querySelectorAll('a[href^="#"]')
+            .forEach(link => {
+
+                link.addEventListener(
+                    "click",
+                    function(e) {
+
+                        const target =
+                            document.querySelector(
+                                this.getAttribute("href")
+                            );
+
+
+                        if (target) {
+
+                            e.preventDefault();
+
+
+                            target.scrollIntoView({
+                                behavior: "smooth"
+                            });
+
+                        }
+
+                    }
+                );
+
+            });
+
+
+        /* ==============================================
+           OPENING + PROFILE LANDING
+        ============================================== */
+
+        const opening =
+            document.getElementById('opening');
+
+        const profileLanding =
+            document.getElementById('profileLanding');
+
+        const risolRain =
+            document.getElementById('risolRain');
+
+
+        function buatRisolJatuh(i) {
+
+            const el =
+                document.createElement('span');
+
+            el.className =
+                'falling-risol ' +
+                [
+                    'mayo',
+                    'choco',
+                    'matcha',
+                    'mentai',
+                    'purple'
+                ][i % 5];
+
+            el.style.left =
+                (Math.random() * 105 - 3) + 'vw';
+
+            el.style.animationDuration =
+                (3.8 + Math.random() * 3.8) + 's';
+
+            el.style.animationDelay =
+                (-Math.random() * 5.5) + 's';
+
+            el.style.transform =
+                'rotate(' +
+                (Math.random() * 360) +
+                'deg)';
+
+            el.style.scale =
+                (0.65 + Math.random() * 0.65)
+                .toFixed(2);
+
+            risolRain.appendChild(el);
+        }
+
+
+        for (
+            let i = 0;
+            i < 24;
+            i++
+        ) {
+
+            buatRisolJatuh(i);
+
+        }
+
+
+        function tampilkanProfile() {
+
+            opening.classList.add('hide');
+
+            profileLanding.classList.add('active');
+
+            document.body.classList.add('locked');
+
+        }
+
+
+        window.addEventListener(
+            'load',
+            function() {
+
+                setTimeout(
+                    tampilkanProfile,
+                    4300
+                );
+
+            }
+        );
+
+
+        function tutupProfile() {
+
+            profileLanding.classList.add('exit');
+
+            document.body.classList.add('locked');
+
+            setTimeout(
+                function() {
+
+                    profileLanding.classList.remove('active');
+
+                    document.body.classList.remove('locked');
+
+                },
+                850
+            );
+
+        }
+
+
+        function masukKeMenu() {
+
+            tutupProfile();
+
+            setTimeout(
+                function() {
+
+                    const target =
+                        document.getElementById('menu');
+
+                    if (target) {
+
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+
+                    }
+
+                },
+                900
+            );
+
+        }
+
+
+        function masukKeLokasi() {
+
+            tutupProfile();
+
+            setTimeout(
+                function() {
+
+                    const target =
+                        document.getElementById('contact') ||
+                        document.getElementById('lokasi');
+
+                    if (target) {
+
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+
+                    }
+
+                },
+                900
+            );
+
+        }
+
+    </script>
+
+</body>
+</html>
